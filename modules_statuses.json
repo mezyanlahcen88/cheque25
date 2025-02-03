@@ -19,5 +19,10 @@
     "Compte": true,
     "Carnet": true,
     "Cheque": true,
-    "Effet": true
+    "Effet": true,
+    "Warehouse": true,
+    "Product": true,
+    "Agency": true,
+    "Brand": true,
+    "Category": true
 }

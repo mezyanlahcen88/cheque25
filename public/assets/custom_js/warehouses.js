@@ -18,19 +18,13 @@ var KTDatatables = function() {
             pagingType: 'full_numbers',
             initComplete: function() {
                 
-$('#category_id').on('change', function() {
-    datatable.column(3).search($(this).val()).draw();
-});
-$('#isactive').on('change', function() {
-    datatable.column(4).search($(this).val()).draw();
-});
             }
         });
     }
 
      // Initialize export buttons
      var exportButtons = function() {
-        const documentTitle = 'categories Report';
+        const documentTitle = 'warehouses Report';
         var buttons = new $.fn.dataTable.Buttons(table, {
             buttons: [
                 { extend: 'copyHtml5', title: documentTitle },

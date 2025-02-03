@@ -18,11 +18,11 @@ var KTDatatables = function() {
             pagingType: 'full_numbers',
             initComplete: function() {
                 
-$('#category_id').on('change', function() {
-    datatable.column(3).search($(this).val()).draw();
-});
 $('#isactive').on('change', function() {
-    datatable.column(4).search($(this).val()).draw();
+    datatable.column(5).search($(this).val()).draw();
+});
+$('#bank_id').on('change', function() {
+    datatable.column(6).search($(this).val()).draw();
 });
             }
         });
@@ -30,7 +30,7 @@ $('#isactive').on('change', function() {
 
      // Initialize export buttons
      var exportButtons = function() {
-        const documentTitle = 'categories Report';
+        const documentTitle = 'agencies Report';
         var buttons = new $.fn.dataTable.Buttons(table, {
             buttons: [
                 { extend: 'copyHtml5', title: documentTitle },
