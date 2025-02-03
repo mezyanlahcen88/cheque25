@@ -1,0 +1,22 @@
+<x-default-layout>
+    @section('breadcrumb')
+        @include('components.breadcrumb-list', [
+            'title' => trans('translation.{{lowerName}}_action_add'),
+            'listPermission' => '{{lowerName}}-list',
+            'listRoute' => route('{{lowerName}}.index'),
+            'listText' => trans('translation.{{lowerName}}_form_{{plural}}_list'),
+        ])
+    @endsection
+    <form action="{{ route('{{lowerName}}.store') }}" method="post" enctype="multipart/form-data">
+        @csrf
+        <div class="row">
+            @include('components.dispaly_errors')
+
+            {{formContent}}
+                <x-save-button />
+        </div>
+    </form>
+    @push('scripts')
+    {!! JsValidator::formRequest('Modules\{{modelName}}\App\Http\Requests\Store{{modelName}}Request'); !!}
+    @endpush
+</x-default-layout>

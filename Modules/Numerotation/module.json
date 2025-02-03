@@ -1,0 +1,11 @@
+{
+    "name": "Numerotation",
+    "alias": "numerotation",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Numerotation\\App\\Providers\\NumerotationServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+use Modules\{{model}}\App\Http\Controllers\{{model}}Controller;
+
+Route::group(['middleware' => 'auth'], function () {
+    //chaneg the status
+    Route::post('/{{lowerName}}/changestatus', [{{model}}Controller::class, 'changeStatus'])->name('{{lowerName}}.changestatus');
+    //to permanently delete
+    Route::delete('/{{lowerName}}/{id}/force_delete', [{{model}}Controller::class, 'forceDelete'])->name('{{lowerName}}.forceDelete');
+    // to restore
+    Route::put('/{{lowerName}}/{id}/restore', [{{model}}Controller::class, 'restore'])->name('{{lowerName}}.restore');
+    //liste all deleted
+    Route::get('/{{lowerName}}/trashed', [{{model}}Controller::class, 'trashed'])->name('{{lowerName}}.trashed');
+    // Get {{plural}} JSON
+        Route::get('/{{lowerName}}/get-{{plural}}-json', [{{model}}Controller::class ,'get{{Capitilize}}Json'])->name('{{plural}}.get{{Capitilize}}Json');
+    // Get {{plural}} JSON
+    Route::get('/{{lowerName}}/get-deleted-{{plural}}-json', [{{model}}Controller::class ,'getDeleted{{Capitilize}}Json'])->name('{{plural}}.getDeleted{{Capitilize}}Json');
+   // delete multiple
+    Route::post('/{{lowerName}}/delete-multiple', [{{model}}Controller::class, 'deleteMultiple'])->name('{{lowerName}}.deleteMultiple');
+    Route::post('/{{lowerName}}/activate-multiple', [{{model}}Controller::class, 'activateMultiple'])->name('{{lowerName}}.activateMultiple');
+    Route::post('/{{lowerName}}/restore-multiple', [{{model}}Controller::class, 'restoreMultiple'])->name('{{lowerName}}.restoreMultiple');
+    Route::resource('{{lowerName}}', {{model}}Controller::class)->names('{{lowerName}}');
+});

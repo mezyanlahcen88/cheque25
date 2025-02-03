@@ -1,0 +1,11 @@
+{
+    "name": "Effet",
+    "alias": "effet",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Effet\\App\\Providers\\EffetServiceProvider"
+    ],
+    "files": []
+}

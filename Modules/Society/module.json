@@ -1,0 +1,11 @@
+{
+    "name": "Society",
+    "alias": "society",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Society\\App\\Providers\\SocietyServiceProvider"
+    ],
+    "files": []
+}

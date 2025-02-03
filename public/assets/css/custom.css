@@ -1,0 +1,36 @@
+body, .app-default {
+    background-color: #fbfbfb !important;
+}
+
+.error-help-block{
+    color : red;
+}
+
+
+/******************** DATATABLE *******************/
+.table.g-5 th, .table.g-5 td {
+    padding: 1rem;
+    text-align: center;
+}
+
+.fw-700{
+    font-weight: 700;
+}
+.form-select2.is-invalid {
+    border-color: #F8285A !important;
+  }
+.image-label{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+.mb-225rem{
+    margin-bottom: 2.25rem;
+}
+
+/******** Media Query *********/
+@media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 100% !important;
+    }
+}

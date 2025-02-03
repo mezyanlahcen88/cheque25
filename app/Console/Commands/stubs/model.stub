@@ -1,0 +1,80 @@
+<?php
+
+namespace Modules\{{class}}\App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Modules\{{class}}\Database\factories\{{class}}Factory;
+use Illuminate\Support\Str;
+
+class {{class}} extends Model
+{
+    use HasFactory, SoftDeletes;
+
+    protected $primaryKey = 'id';
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
+    /**
+     * The "type" of the primary key ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+    protected static function newFactory(): {{class}}Factory
+    {
+        return {{class}}Factory::new();
+    }
+        {{fillable}}
+        {{files}}
+    public function getFiles()
+    {
+        return $this->files;
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->id = Str::uuid();
+        });
+    }
+
+    /**
+ * Scope a query to only include actived items.
+ *
+ * @param \Illuminate\Database\Eloquent\Builder $query The query builder instance.
+ * @return \Illuminate\Database\Eloquent\Builder The modified query builder.
+ */
+public function scopeActive($query){
+    return $query->where('isactive',1);
+}
+
+    //  put the relation of this Model Here
+        {{relationships}}
+    /**
+     *getters pour recuperer les attribute de type file pour l'utiliser dans le crud
+     *
+     */
+
+        {{getRowsTable}}
+
+
+
+    /**
+     *getters pour recuperer les attribute de type file pour l'utiliser dans le crud
+     *
+     */
+
+  {{getRowsTableTrashed}}
+
+        {{getColumns}}
+        {{getTrashedColumns}}
+}

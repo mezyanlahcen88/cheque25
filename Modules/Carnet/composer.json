@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/carnet",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Carnet\\": "",
+            "Modules\\Carnet\\App\\": "app/",
+            "Modules\\Carnet\\Database\\Factories\\": "database/factories/",
+            "Modules\\Carnet\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Carnet\\Tests\\": "tests/"
+        }
+    }
+}

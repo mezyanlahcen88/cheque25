@@ -1,0 +1,11 @@
+{
+    "name": "Secteur",
+    "alias": "secteur",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Secteur\\App\\Providers\\SecteurServiceProvider"
+    ],
+    "files": []
+}

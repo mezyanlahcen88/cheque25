@@ -1,0 +1,43 @@
+<?php
+
+namespace Modules\{{modelName}}\App\Http\Datatable;
+
+use Modules\{{modelName}}\App\Models\{{modelName}};
+
+class {{modelName}}Datatable {
+    public static function dataTable($objects) {
+        return Datatables($objects)
+
+           {{filterColumns}}
+            ->addColumn('actions', function ({{modelName}} $object) {
+                return view('{{lowerName}}::actions', compact('object'));
+            })
+            ->addColumn('checkbox', function ({{modelName}} $object) {
+                return view('components.checkbox', compact('object'));
+            })
+        {{addedColumns}}
+{{avatarColumnEdit}}
+            ->setRowAttr(['align' => 'center'])
+            ->make(true);
+    }
+
+    public static function deletedDataTable($objects) {
+        return Datatables($objects)
+        {{filterColumns}}
+            ->addColumn('actions', function ({{modelName}} $object) {
+                return view('{{lowerName}}::trashedActions', compact('object'));
+            })
+            ->addColumn('checkbox', function ({{modelName}} $object) {
+                return view('components.checkbox', compact('object'));
+            })
+        {{addedColumns}}
+
+{{avatarColumnEdit}}
+            ->setRowAttr(['align' => 'center'])
+            ->make(true);
+    }
+
+
+
+
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Carnet",
+    "alias": "carnet",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Carnet\\App\\Providers\\CarnetServiceProvider"
+    ],
+    "files": []
+}

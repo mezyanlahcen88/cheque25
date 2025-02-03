@@ -1,0 +1,23 @@
+{
+    "Language": true,
+    "Role": true,
+    "User": true,
+    "Setting": true,
+    "Permission": true,
+    "Sidebar": true,
+    "State": true,
+    "City": true,
+    "Secteur": true,
+    "Client": true,
+    "Numerotation": true,
+    "Exercice": true,
+    "Site": true,
+    "Society": true,
+    "Employe": true,
+    "Supplier": true,
+    "Bank": true,
+    "Compte": true,
+    "Carnet": true,
+    "Cheque": true,
+    "Effet": true
+}

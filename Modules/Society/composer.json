@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/society",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Society\\": "",
+            "Modules\\Society\\App\\": "app/",
+            "Modules\\Society\\Database\\Factories\\": "database/factories/",
+            "Modules\\Society\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Society\\Tests\\": "tests/"
+        }
+    }
+}

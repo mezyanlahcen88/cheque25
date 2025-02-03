@@ -1,0 +1,11 @@
+{
+    "name": "Compte",
+    "alias": "compte",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Compte\\App\\Providers\\CompteServiceProvider"
+    ],
+    "files": []
+}

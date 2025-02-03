@@ -1,0 +1,22 @@
+<x-default-layout>
+    @section('breadcrumb')
+        @include('components.breadcrumb-list', [
+            'title' => trans('translation.{{lowerName}}_action_add'),
+            'listPermission' => '{{lowerName}}-list',
+            'listRoute' => route('{{lowerName}}.index'),
+            'listText' => trans('translation.{{lowerName}}_form_{{plural}}_list'),
+        ])
+    @endsection
+    <form action="{{ route('{{lowerName}}.update', $object->id) }}" method="post" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+        <div class="row">
+            @include('components.dispaly_errors')
+            {{formContent}}
+            <x-update-button />
+        </div>
+    </form>
+    @push('scripts')
+    {!! JsValidator::formRequest('Modules\{{modelName}}\App\Http\Requests\Update{{modelName}}Request'); !!}
+    @endpush
+</x-default-layout>

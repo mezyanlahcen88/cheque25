@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/exercice",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Exercice\\": "",
+            "Modules\\Exercice\\App\\": "app/",
+            "Modules\\Exercice\\Database\\Factories\\": "database/factories/",
+            "Modules\\Exercice\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Exercice\\Tests\\": "tests/"
+        }
+    }
+}

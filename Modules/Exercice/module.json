@@ -1,0 +1,11 @@
+{
+    "name": "Exercice",
+    "alias": "exercice",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Exercice\\App\\Providers\\ExerciceServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Cheque",
+    "alias": "cheque",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Cheque\\App\\Providers\\ChequeServiceProvider"
+    ],
+    "files": []
+}

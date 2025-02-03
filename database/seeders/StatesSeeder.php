@@ -1,0 +1,23 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+
+class StatesSeeder extends Seeder
+{
+    /**
+     * Auto generated seed file
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $path = database_path('sql/states.sql');
+        $sql = File::get($path);
+        DB::unprepared($sql);
+        //DB::statement('ALTER SEQUENCE countries_id_seq RESTART WITH 251');
+    }
+}
