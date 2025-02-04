@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('product_type');
             $table->string('service');
             $table->string('buy_unit');
-            $table->double(10,2,'buy_price');
+            $table->double('buy_price',10,2);
             $table->string('actions');
             $table->string('lot_number');
             $table->timestamp('date_of_expiration');
