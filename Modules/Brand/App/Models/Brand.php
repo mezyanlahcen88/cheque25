@@ -32,8 +32,8 @@ class Brand extends Model
         return BrandFactory::new();
     }
         protected $fillable = [
-        'name',
         'picture',
+        'name',
         'isactive',
     ];
 
@@ -66,7 +66,7 @@ public function scopeActive($query){
 }
 
     //  put the relation of this Model Here
-        
+
     /**
      *getters pour recuperer les attribute de type file pour l'utiliser dans le crud
      *
@@ -76,8 +76,8 @@ public function scopeActive($query){
     {
         return [
             'created_at' => 'created_at',
-            'name' => 'name',
             'picture' => 'picture',
+            'name' => 'name',
             'isactive' => 'isactive',
         ];
     }
@@ -94,8 +94,8 @@ public function scopeActive($query){
     {
         return [
             'created_at' => 'created_at',
-            'name' => 'name',
             'picture' => 'picture',
+            'name' => 'name',
             'isactive' => 'isactive',
         ];
     }
@@ -116,11 +116,11 @@ public function scopeActive($query){
                 'visible' => false,
             ],
             [
-                'data' => 'name',
+                'data' => 'picture',
                 'visible' => true,
             ],
             [
-                'data' => 'picture',
+                'data' => 'name',
                 'visible' => true,
             ],
             [
@@ -149,11 +149,11 @@ public function scopeActive($query){
                 'visible' => false,
             ],
             [
-                'data' => 'name',
+                'data' => 'picture',
                 'visible' => true,
             ],
             [
-                'data' => 'picture',
+                'data' => 'name',
                 'visible' => true,
             ],
             [

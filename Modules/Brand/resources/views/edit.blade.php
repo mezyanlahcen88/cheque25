@@ -20,11 +20,11 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12 text-center mb-225rem">
-                                
+
                         <x-image-field :background-url="url('/assets/media/svg/avatars/blank.svg')" :image-url="url(URL::asset(getPicture($object->picture,'brands')))" avatar-name="picture" model="brand"/>
                             </div>
-                            
-                            <x-input-field cols="col-md-6" divId="name" column="name" model="brand"
+
+                            <x-input-field cols="col-md-12" divId="name" column="name" model="brand"
                                 optional="text-danger" inputType="text" className="" columnId="name"
                                 columnValue="{{ $object->name }}" attribute="required" readonly="false" />
                         </div>

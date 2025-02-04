@@ -10,6 +10,7 @@ use Modules\Bank\App\Models\Bank;
 use Modules\Site\App\Models\Site;
 use Spatie\Permission\Models\Role;
 use Modules\Carnet\App\Models\Carnet;
+use Modules\Category\App\Models\Category;
 use Modules\Compte\App\Models\Compte;
 use Modules\Secteur\App\Models\Secteur;
 use Modules\Sidebar\App\Models\Sidebar;
@@ -209,5 +210,17 @@ if (!function_exists('carnets')) {
     function carnets()
     {
       return Carnet::pluck('series','id');
+    }
+}
+
+/**
+ * List of categories.
+ *
+ * @return void
+ */
+if (!function_exists('categories')) {
+    function categories()
+    {
+      return Category::pluck('name','id');
     }
 }

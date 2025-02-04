@@ -11,6 +11,7 @@ use Modules\Setting\Database\Seeders\SettingSeeder;
 use Modules\Sidebar\Database\Seeders\SidebarSeeder;
 use Modules\Numerotation\Database\Seeders\NumerotationSeeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
         $this->call([
             LanguagesTableSeeder::class,
             GroupeSeeder::class,

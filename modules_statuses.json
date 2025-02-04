@@ -21,8 +21,9 @@
     "Cheque": true,
     "Effet": true,
     "Warehouse": true,
-    "Product": true,
     "Agency": true,
     "Brand": true,
-    "Category": true
+    "Category": true,
+    "Product": true
+
 }

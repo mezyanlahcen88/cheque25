@@ -17,7 +17,7 @@ return new class extends Migration
             $table->uuid('id')->unique();
             $table->string('picture')->nullable();
             $table->string('name');
-            $table->string('category_id');
+            $table->string('category_id')->nullable();
             $table->boolean('isactive')->default(1);
             $table->timestamps();
             $table->softDeletes();
