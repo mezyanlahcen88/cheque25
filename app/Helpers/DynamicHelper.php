@@ -7,6 +7,7 @@ use App\Models\Country;
 use App\Models\Language;
 use App\Models\Profession;
 use Modules\Bank\App\Models\Bank;
+use Modules\Brand\App\Models\Brand;
 use Modules\Site\App\Models\Site;
 use Spatie\Permission\Models\Role;
 use Modules\Carnet\App\Models\Carnet;
@@ -16,6 +17,7 @@ use Modules\Secteur\App\Models\Secteur;
 use Modules\Sidebar\App\Models\Sidebar;
 use Modules\Society\App\Models\Society;
 use Modules\Permission\App\Models\Permission;
+use Modules\Warehouse\App\Models\Warehouse;
 
 /**
  * List of users.
@@ -224,3 +226,27 @@ if (!function_exists('categories')) {
       return Category::pluck('name','id');
     }
 }
+
+/**
+ * List of brands.
+ *
+ * @return void
+ */
+if (!function_exists('brands')) {
+  function brands()
+  {
+    return Brand::pluck('name','id');
+  }
+}
+/**
+ * List of warehouces.
+ *
+ * @return void
+ */
+if (!function_exists('warehouses')) {
+  function warehouses()
+  {
+    return Warehouse::pluck('name','id');
+  }
+}
+
