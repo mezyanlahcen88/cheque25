@@ -56,6 +56,22 @@ if (!function_exists('status')) {
  *
  * @return void
  */
+if (!function_exists('warehouseTypes')) {
+    function warehouseTypes()
+    {
+        return  [
+            'type 1' => 'type 1',
+            'type 2' => 'type 2',
+            'type 3' => 'type 3',
+        ];
+    }
+
+}
+/**
+ * List of product types.
+ *
+ * @return void
+ */
 if (!function_exists('productTypes')) {
     function productTypes()
     {

@@ -23,9 +23,9 @@
                             <x-input-field cols="col-md-6" divId="name" column="name" model="warehouse"
                                 optional="text-danger" inputType="text" className="" columnId="name"
                                 columnValue="{{ old('name') }}" attribute="required" readonly="false" />
-                            <x-input-field cols="col-md-6" divId="type" column="type" model="warehouse"
-                                optional="text-danger" inputType="text" className="" columnId="type"
-                                columnValue="{{ old('type') }}" attribute="required" readonly="false" />
+                                <x-single-select cols="col-md-6" div-id="type" column="type" model="warehouse"
+                                label="warehouse_form_type" optional="text-danger" id="type" :options="warehouseTypes()"
+                                :object=false />
                             <x-input-field cols="col-md-6" divId="address" column="address" model="warehouse"
                                 optional="text-danger" inputType="text" className="" columnId="address"
                                 columnValue="{{ old('address') }}" attribute="required" readonly="false" />
