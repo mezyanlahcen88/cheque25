@@ -61,6 +61,7 @@
 optional="text-primary" trueText="Yes" falseText="No"
 columnValue="{{ old('iscomposable') }}" divID="iscomposable" />
 
+
                         </div>
                     </div>
                 </div>

@@ -49,7 +49,7 @@ Route::get('/hash', function () {
     return $password;
 });
 Route::get('/sss', function () {
-    return getSettings()['sender_default_name'];
+    return getSettings();
 });
 Route::get('/assign', function () {
     $object =User::first();
