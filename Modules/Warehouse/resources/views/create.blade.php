@@ -27,7 +27,7 @@
                                 label="warehouse_form_type" optional="text-danger" id="type" :options="warehouseTypes()"
                                 :object=false />
                             <x-input-field cols="col-md-6" divId="address" column="address" model="warehouse"
-                                optional="text-danger" inputType="text" className="" columnId="address"
+                                optional="text-primary" inputType="text" className="" columnId="address"
                                 columnValue="{{ old('address') }}" attribute="required" readonly="false" />
                             
                         </div>

@@ -25,34 +25,11 @@ class UpdateWarehouseRequest extends FormRequest
      */
     public function rules()
     {
-
-
         return [
             'name' => ['bail', 'required', 'string'],
-'type' => ['bail', 'required', 'string'],
-'address' => ['bail', 'required', 'string'],
-'active' => ['bail', 'nullable', 'boolean'],
-
+            'type' => ['bail', 'required', 'string'],
+            'address' => ['bail', 'nullable', 'string'],
         ];
     }
-        // public function messages(): array
-    // {
-    //     return [
-    //         'start_date.required_if' => ':attribute cannot be empty.',
-    //         'delivery_date.required_if' => ':attribute cannot be empty.',
-    //         'count_tranche.required_if' => ':attribute cannot be empty.',
-    //         'delivery_date.after' => 'The delivery date must be after the start date when the project is not tranchable.',
-    //     ];
-    // }
-
-    // public function withValidator($validator)
-    // {
-    //     $validator->sometimes('count_tranche', ['integer', 'min:2', 'max:5'], function ($input) {
-    //         return $input->tranchable == 1;
-    //     });
-    //     $validator->sometimes('delivery_date', ['after:start_date'], function ($input) {
-    //         return $input->tranchable == 0;
-    //     });
-    // }
 }
 ?>

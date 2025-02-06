@@ -27,16 +27,9 @@
                                 label="product_form_type" optional="text-danger" id="type" :options="warehouseTypes()"
                                 :object=$object />
                             <x-input-field cols="col-md-6" divId="address" column="address" model="warehouse"
-                                optional="text-danger" inputType="text" className="" columnId="address"
+                                optional="text-primary" inputType="text" className="" columnId="address"
                                 columnValue="{{ $object->address }}" attribute="required" readonly="false" />
-                            <x-input-checkbox-field
-                                cols="col-md-6"
-                                column="active"
-                                model="warehouse"
-                                optional="text-danger"
-                                columnValue="{{ $object->active }}"
-                                divID="active"
-                            />
+
                         </div>
                     </div>
                 </div>
