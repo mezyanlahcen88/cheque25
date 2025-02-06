@@ -34,6 +34,8 @@ class Product extends Model
         protected $fillable = [
         'picture',
         'reference',
+        'name',
+        'description',
         'product_type',
         'service',
         'buy_unit',
@@ -105,6 +107,8 @@ public function warehouse()
             'created_at' => 'created_at',
             'picture' => 'picture',
             'reference' => 'reference',
+            'name' => 'name',
+            'description' => 'description',
             'product_type' => 'product_type',
             'service' => 'service',
             'buy_unit' => 'buy_unit',
@@ -135,6 +139,8 @@ public function warehouse()
             'created_at' => 'created_at',
             'picture' => 'picture',
             'reference' => 'reference',
+            'name' => 'name',
+            'description' => 'description',
             'product_type' => 'product_type',
             'service' => 'service',
             'buy_unit' => 'buy_unit',
@@ -175,16 +181,24 @@ public function warehouse()
                 'visible' => true,
             ],
             [
+                'data' => 'name',
+                'visible' => true,
+            ],
+            [
+                'data' => 'description',
+                'visible' => true,
+            ],
+            [
                 'data' => 'product_type',
                 'visible' => true,
             ],
             [
                 'data' => 'service',
-                'visible' => true,
+                'visible' => false,
             ],
             [
                 'data' => 'buy_unit',
-                'visible' => true,
+                'visible' => false,
             ],
             [
                 'data' => 'buy_price',
@@ -256,16 +270,24 @@ public function warehouse()
                 'visible' => true,
             ],
             [
+                'data' => 'name',
+                'visible' => true,
+            ],
+            [
+                'data' => 'description',
+                'visible' => true,
+            ],
+            [
                 'data' => 'product_type',
                 'visible' => true,
             ],
             [
                 'data' => 'service',
-                'visible' => true,
+                'visible' => false,
             ],
             [
                 'data' => 'buy_unit',
-                'visible' => true,
+                'visible' => false,
             ],
             [
                 'data' => 'buy_price',

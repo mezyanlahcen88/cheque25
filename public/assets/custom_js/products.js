@@ -19,16 +19,16 @@ var KTDatatables = function() {
             initComplete: function() {
                 
 $('#category_id').on('change', function() {
-    datatable.column(11).search($(this).val()).draw();
-});
-$('#brand_id').on('change', function() {
-    datatable.column(12).search($(this).val()).draw();
-});
-$('#warehouse_id').on('change', function() {
     datatable.column(13).search($(this).val()).draw();
 });
-$('#isactive').on('change', function() {
+$('#brand_id').on('change', function() {
+    datatable.column(14).search($(this).val()).draw();
+});
+$('#warehouse_id').on('change', function() {
     datatable.column(15).search($(this).val()).draw();
+});
+$('#isactive').on('change', function() {
+    datatable.column(17).search($(this).val()).draw();
 });
             }
         });

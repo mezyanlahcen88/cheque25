@@ -50,3 +50,54 @@ if (!function_exists('status')) {
     }
 
 }
+
+/**
+ * List of product types.
+ *
+ * @return void
+ */
+if (!function_exists('productTypes')) {
+    function productTypes()
+    {
+        return  [
+            'type 1' => 'type 1',
+            'type 2' => 'type 2',
+            'type 3' => 'type 3',
+        ];
+    }
+
+}
+
+/**
+ * List of services.
+ *
+ * @return void
+ */
+if (!function_exists('services')) {
+    function services()
+    {
+        return  [
+            'service 1' => 'Service 1',
+            'service 2' => 'Service 2',
+            'service 3' => 'Service 3',
+            
+        ];
+    }
+
+}
+/**
+ * List of services.
+ *
+ * @return void
+ */
+if (!function_exists('buyUnits')) {
+    function buyUnits()
+    {
+        return  [
+            'KG' => 'KG',
+            'L' => 'Liter',
+            'Piece' => 'Piece',
+        ];
+    }
+
+}

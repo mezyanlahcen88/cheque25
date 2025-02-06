@@ -17,6 +17,8 @@ return new class extends Migration
             $table->uuid('id')->unique();
             $table->string('picture')->nullable();
             $table->string('reference');
+            $table->string('name');
+            $table->text('description');
             $table->string('product_type');
             $table->string('service');
             $table->string('buy_unit');

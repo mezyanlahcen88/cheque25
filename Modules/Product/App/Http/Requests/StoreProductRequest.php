@@ -18,6 +18,8 @@ class StoreProductRequest extends FormRequest
         return [
             'picture' => ['bail', 'nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
 'reference' => ['bail', 'required', 'string'],
+'name' => ['bail', 'required', 'string'],
+'description' => ['bail', 'required', 'string'],
 'product_type' => ['bail', 'required', 'string'],
 'service' => ['bail', 'required', 'string'],
 'buy_unit' => ['bail', 'required', 'string'],

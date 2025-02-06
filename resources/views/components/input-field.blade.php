@@ -12,9 +12,7 @@
         <strong>{{ $message }}</strong>
     </span>
     @enderror
-    {{-- <span class="invalid-feedback " role="alert" id="{{ $column }}_error">
-        <strong></strong>
-    </span> --}}
+
     </div>
 
 

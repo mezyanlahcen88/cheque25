@@ -2,7 +2,8 @@
     <div class="form-group">
         <label for="{{ $column }}">{{ trans('translation.' . $model . '_form_' . $column) }} &nbsp;
             <span class="{{ $optional }}">*</span></label>
-        <textarea class="form-control summernote" name="{{ $column }}" id="{{ $column }}">{{ $columnValue }}</textarea>
+        <textarea class="form-control ckeditor" name="{{ $column }}" id="{{ $column }}">{{ $columnValue }}</textarea>
+        {{-- <textarea class="summernote" name="{{ $column }}" id="{{ $column }}">{{ $columnValue }}</textarea> --}}
         {{-- ckeditor --}}
     </div>
 </div>

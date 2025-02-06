@@ -20,7 +20,7 @@ use Modules\Numerotation\App\Models\Numerotation;
 if (!function_exists('getDefaultLangId')) {
     function getDefaultLangId()
     {
-        $defaultLanguage = Language::where('isDefault', 1)->first();
+        $defaultLanguage = Language::where('isDefault', 1)->first()->id;
         return $defaultLanguage;
     }
 }

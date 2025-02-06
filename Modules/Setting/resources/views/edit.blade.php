@@ -30,14 +30,14 @@
         <!--end::Tab content-->
     </div>
     @push('scripts')
-    <script src="{{ URL::asset('assets/ckeditor/ckeditor.js') }}"></script>
+    {{-- <script src="{{ URL::asset('assets/ckeditor/ckeditor.js') }}"></script>
     <script>
         var allEditors = document.querySelectorAll('.ckeditor');
 for (var i = 0; i < allEditors.length; ++i) {
   ClassicEditor.create(allEditors[i]);
 }
 
-    </script>
+    </script> --}}
     
     @endpush
 </x-default-layout>

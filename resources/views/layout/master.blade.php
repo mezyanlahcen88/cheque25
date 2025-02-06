@@ -71,7 +71,7 @@
 @endforeach
 <!--end::Custom Javascript-->
 <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
-{{-- <script src="{{URL::asset('assets/ckeditor/ckeditor.js')}}"></script> --}}
+<script src="{{URL::asset('assets/ckeditor/ckeditor.js')}}"></script>
 <script src="{{URL::asset('assets/summernote/summernote-bs5.min.js')}}"></script>
 
 @stack('scripts')
@@ -79,20 +79,7 @@
 {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs5.min.js"></script> --}}
 
 <script>
-         $('.summernote').summernote({
-        placeholder: 'Hello stand alone ui',
-        tabsize: 2,
-        height: 120,
-        toolbar: [
-          ['style', ['style']],
-          ['font', ['bold', 'underline', 'clear']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['table', ['table']],
-          ['insert', ['link', 'picture', 'video']],
-          ['view', ['fullscreen', 'codeview', 'help']]
-        ]
-      });
+         $('.summernote').summernote();
   </script>
 
 @livewireScripts

@@ -2,11 +2,12 @@
 
 namespace Modules\Category\App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Category\Database\factories\CategoryFactory;
-use Illuminate\Support\Str;
 
 class Category extends Model
 {
@@ -31,16 +32,9 @@ class Category extends Model
     {
         return CategoryFactory::new();
     }
-        protected $fillable = [
-        'picture',
-        'name',
-        'category_id',
-        'isactive',
-    ];
+    protected $fillable = ['picture', 'name', 'category_id', 'isactive'];
 
-        private $files = [
-        'picture',
-    ];
+    private $files = ['picture'];
 
     public function getFiles()
     {
@@ -57,28 +51,37 @@ class Category extends Model
     }
 
     /**
- * Scope a query to only include actived items.
- *
- * @param \Illuminate\Database\Eloquent\Builder $query The query builder instance.
- * @return \Illuminate\Database\Eloquent\Builder The modified query builder.
- */
-public function scopeActive($query){
-    return $query->where('isactive',1);
-}
+     * Scope a query to only include actived items.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query The query builder instance.
+     * @return \Illuminate\Database\Eloquent\Builder The modified query builder.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('isactive', 1);
+    }
 
     //  put the relation of this Model Here
-        public function category()
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
-
+    /**
+     * Get all of the categoreis for the Category
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function categoeis(): HasMany
+    {
+        return $this->hasMany(Category::class, 'category_id', 'id');
+    }
 
     /**
      *getters pour recuperer les attribute de type file pour l'utiliser dans le crud
      *
      */
 
-        public function getRowsTable()
+    public function getRowsTable()
     {
         return [
             'created_at' => 'created_at',
@@ -89,15 +92,12 @@ public function scopeActive($query){
         ];
     }
 
-
-
-
     /**
      *getters pour recuperer les attribute de type file pour l'utiliser dans le crud
      *
      */
 
-  public function getRowsTableTrashed()
+    public function getRowsTableTrashed()
     {
         return [
             'created_at' => 'created_at',
@@ -108,8 +108,7 @@ public function scopeActive($query){
         ];
     }
 
-
-        public static function getColumns()
+    public static function getColumns()
     {
         return [
             [
@@ -142,11 +141,10 @@ public function scopeActive($query){
             [
                 'data' => 'actions',
             ],
-
         ];
     }
 
-        public static function getTrashedColumns()
+    public static function getTrashedColumns()
     {
         return [
             [
@@ -179,8 +177,6 @@ public function scopeActive($query){
             [
                 'data' => 'actions',
             ],
-
         ];
     }
-
 }
