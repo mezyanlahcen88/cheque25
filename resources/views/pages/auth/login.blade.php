@@ -17,7 +17,7 @@
 
 
         <div class="fv-row mb-8">
-            <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent" value="mezyan.lahcen88@gmail.com"/>
+            <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent" value="admin@admin.com"/>
         </div>
 
         <div class="fv-row mb-3">
