@@ -24,10 +24,12 @@
     <!--end::Edit button-->
 
     <!--begin::Cancel button-->
+    @if (isset($routeName))
     <span class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow removePicture"
         data-kt-image-input-action="cancel" data-bs-toggle="tooltip" data-bs-dismiss="click" title="Cancel avatar" data-route-name="{{ $routeName }}">
         <i class="ki-outline ki-cross fs-3"></i>
     </span>
+    @endif
     <!--end::Cancel button-->
     <span for={{ $avatarName }} class="form-label d-block my-2 image-label">{{ trans('translation.'.$model.'_form_'.$avatarName) }} &nbsp;<span class="text-primary">*</span></span>
     <!--begin::Remove button-->
