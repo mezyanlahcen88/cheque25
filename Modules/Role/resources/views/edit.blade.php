@@ -49,7 +49,6 @@
 
 
                                         <tr>
-                                            {{-- <td class="text-gray-800" style="width:18%">{{$groupe->name}}</td> --}}
                                             <td class="text-gray-800" style="width:18%">
                                                 <div class="d-flex justify-content-between">
                                                     <label
@@ -58,14 +57,14 @@
                                                         type="checkbox" value="{{ $groupe->name }}"
                                                         name="groupe">
                                                     <span
-                                                        class="form-check-label">All {{ $groupe->name }}</span>
+                                                        class="form-check-label">All {{ $groupe->name }} permissions</span>
                                                 </label>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="row d-flex">
                                                     @foreach ($groupe->permissions as $permission)
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-3  my-1">
                                                     <label
                                                     class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
                                                     <input class="form-check-input item-checkbox" type="checkbox"

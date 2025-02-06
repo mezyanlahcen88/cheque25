@@ -21,7 +21,6 @@
                                 optional="text-danger" inputType="text" className="" columnId="name"
                                 columnValue="{{ old('name') }}" attribute="" readonly="false" />
                         </div>
-                        @if (Auth::user()->user_type == 'SYSTEM')
                         <div class="row mt-2">
                             <div class="col-md-12">
                                 <h6 class="fs-5 form-label mb-2">Role Permissions &nbsp;<span
@@ -55,14 +54,14 @@
                                                             type="checkbox" value="{{ $groupe->name }}"
                                                             name="groupe">
                                                         <span
-                                                            class="form-check-label">All {{ $groupe->name }}</span>
+                                                            class="form-check-label">All {{ $groupe->name }} permissions</span>
                                                     </label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="row d-flex">
                                                         @foreach ($groupe->permissions as $permission)
-                                                            <div class="col-md-3">
+                                                            <div class="col-md-3 my-1">
                                                                 <label
                                                                     class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
                                                                     <input class="form-check-input item-checkbox"
@@ -89,7 +88,7 @@
                             @enderror
                             <span id="permissions[]-error" class="help-block error-help-block"></span>
                         </div>
-                        @endif
+                   
 
                     </div>
                 </div>
