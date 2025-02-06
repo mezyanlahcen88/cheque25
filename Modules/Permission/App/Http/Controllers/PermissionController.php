@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Modules\Permission\App\Models\Permission;
 use Illuminate\Validation\ValidationException;
-use Modules\Permission\App\Http\DataTable\PermissionDataTable;
+use Modules\Permission\App\Http\Datatable\PermissionDatatable;
 use Modules\Permission\App\Http\Requests\StorePermissionRequest;
 use Modules\Permission\App\Http\Requests\UpdatePermissionRequest;
 
@@ -53,7 +53,7 @@ class PermissionController extends Controller
      public function getPermissionsJson()
     {
         $objects = Permission::orderBy('created_at','desc');
-        return PermissionDataTable::dataTable($objects);
+        return PermissionDatatable::dataTable($objects);
     }
 
 
