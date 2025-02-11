@@ -38,9 +38,10 @@ class Product extends Model
         'description',
         'product_type',
         'service',
+        'stock',
+        'stock_alert',
         'buy_unit',
         'buy_price',
-        'actions',
         'lot_number',
         'date_of_expiration',
         'destockage_unit',
@@ -111,9 +112,10 @@ public function warehouse()
             'description' => 'description',
             'product_type' => 'product_type',
             'service' => 'service',
+            'stock' => 'stock',
+            'stock_alert' => 'stock_alert',
             'buy_unit' => 'buy_unit',
             'buy_price' => 'buy_price',
-            'actions' => 'actions',
             'lot_number' => 'lot_number',
             'date_of_expiration' => 'date_of_expiration',
             'destockage_unit' => 'destockage_unit',
@@ -143,9 +145,10 @@ public function warehouse()
             'description' => 'description',
             'product_type' => 'product_type',
             'service' => 'service',
+            'stock' => 'stock',
+            'stock_alert' => 'stock_alert',
             'buy_unit' => 'buy_unit',
             'buy_price' => 'buy_price',
-            'actions' => 'actions',
             'lot_number' => 'lot_number',
             'date_of_expiration' => 'date_of_expiration',
             'destockage_unit' => 'destockage_unit',
@@ -197,15 +200,19 @@ public function warehouse()
                 'visible' => false,
             ],
             [
+                'data' => 'stock',
+                'visible' => false,
+            ],
+            [
+                'data' => 'stock_alert',
+                'visible' => false,
+            ],
+            [
                 'data' => 'buy_unit',
                 'visible' => false,
             ],
             [
                 'data' => 'buy_price',
-                'visible' => false,
-            ],
-            [
-                'data' => 'actions',
                 'visible' => false,
             ],
             [
@@ -286,15 +293,19 @@ public function warehouse()
                 'visible' => false,
             ],
             [
+                'data' => 'stock',
+                'visible' => false,
+            ],
+            [
+                'data' => 'stock_alert',
+                'visible' => false,
+            ],
+            [
                 'data' => 'buy_unit',
                 'visible' => false,
             ],
             [
                 'data' => 'buy_price',
-                'visible' => false,
-            ],
-            [
-                'data' => 'actions',
                 'visible' => false,
             ],
             [

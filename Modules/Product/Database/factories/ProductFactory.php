@@ -3,7 +3,10 @@
 namespace Modules\Product\database\factories;
 
 use Illuminate\Support\Str;
+use Modules\Brand\App\Models\Brand;
+use Modules\Category\App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Warehouse\App\Models\Warehouse;
 
 class ProductFactory extends Factory
 {
@@ -17,45 +20,30 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
+        $categories = Category::where('parent_id','!=',null)->pluck('id')->toArray();
+        $brands = Brand::pluck('id')->toArray();
+        $warehouses = Warehouse::pluck('id')->toArray();
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->unique()->safeEmail,
-            'email_verified_at' => now(),
-            'password' => bcrypt('password'),
-            'remember_token' => Str::random(10),
-            'created_at' => now(),
-            'updated_at' => now(),
-            'deleted_at' => null,
-            'tiny_int' => $this->faker->numberBetween(-128, 127),
-            'small_int' => $this->faker->numberBetween(-32768, 32767),
-            'medium_int' => $this->faker->numberBetween(-8388608, 8388607),
-            'int' => $this->faker->numberBetween(-2147483648, 2147483647),
-            'big_int' => $this->faker->numberBetween(-9223372036854775808, 9223372036854775807),
-            'unsigned_tiny_int' => $this->faker->numberBetween(0, 255),
-            'unsigned_small_int' => $this->faker->numberBetween(0, 65535),
-            'unsigned_medium_int' => $this->faker->numberBetween(0, 16777215),
-            'unsigned_int' => $this->faker->numberBetween(0, 4294967295),
-            'unsigned_big_int' => $this->faker->numberBetween(0, 18446744073709551615),
-            'float' => $this->faker->randomFloat(2, 0, 999999.99),
-            'double' => $this->faker->randomFloat(2, 0, 999999.99),
-            'decimal' => $this->faker->randomFloat(2, 0, 999999.99),
-            'bool' => $this->faker->boolean,
-            'enum' => $this->faker->randomElement(['value1', 'value2', 'value3']),
-            'text' => $this->faker->text,
-            'medium_text' => $this->faker->text(500),
-            'long_text' => $this->faker->text(1000),
-            'json' => $this->faker->randomElement([json_encode(['key1' => 'value1', 'key2' => 'value2']), null]),
-            'jsonb' => $this->faker->randomElement([json_encode(['key1' => 'value1', 'key2' => 'value2']), null]),
-            'date' => $this->faker->date,
-            'date_time' => $this->faker->dateTime,
-            'date_time_tz' => $this->faker->dateTime,
-            'time' => $this->faker->time,
-            'time_tz' => $this->faker->time,
-            'year' => $this->faker->year,
-            'binary' => $this->faker->randomElement([pack('H*', md5('binary')), null]),
-            'uuid' => $this->faker->uuid,
-            'ip_address' => $this->faker->ipv4,
-            'mac_address' => $this->faker->macAddress,
+                'picture' => $this->faker->optional()->imageUrl(),
+                'reference' => $this->faker->unique()->bothify('REF-#####'),
+                'name' => $this->faker->word,
+                'description' => $this->faker->optional()->sentence,
+                'product_type' => $this->faker->randomElement(['Typ eA', 'Type B', 'Type C']),
+                'service' => $this->faker->randomElement(['Service 1', 'Service 2', 'Service 3']),
+                'stock' => $this->faker->optional()->numberBetween(0, 1000),
+                'stock_alert' => $this->faker->optional()->numberBetween(10, 100),
+                'buy_unit' => $this->faker->randomElement(['Unit A', 'Unit B', 'Unit C']),
+                'buy_price' => $this->faker->optional()->randomFloat(2, 0, 1000),
+                'lot_number' => $this->faker->optional()->bothify('LOT-#####'),
+                'date_of_expiration' => $this->faker->optional()->dateTimeBetween('now', '+2 years'),
+                'destockage_unit' => $this->faker->randomElement(['Unit A', 'Unit B', 'Unit C']),
+                'category_id' => $this->faker->randomElement($categories),
+                'brand_id' =>$this->faker->randomElement($brands),
+                'warehouse_id' => $this->faker->randomElement($warehouses),
+                'iscomposable' => $this->faker->boolean,
+                'isactive' => $this->faker->boolean,
+                'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+                'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
     }
 }

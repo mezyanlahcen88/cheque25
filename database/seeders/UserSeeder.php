@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'isSuperAdmin' => 1,
             'state_id' => 10,
             'city_id' => 100,
-            'language_id' => 1,
+            'language_id' => 2,
             'phone' => '+212602086429',
             'picture' => 'avatar.jpg',
             'address' => 'maroc kenitra elwafaa',

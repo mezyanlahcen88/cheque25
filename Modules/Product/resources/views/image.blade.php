@@ -5,11 +5,11 @@
             <div class="symbol-label">
 
                     @if($object->picture)
-                    <img src="{{ URL::asset(getPicture($object->picture, 'products')) }}" alt="{{ $object->product_type }}"
+                    <img src="{{ URL::asset(getPicture($object->picture, 'products')) }}" alt="{{ $object->name }}"
                     class="w-100" />
                 @else
-                    <div class="symbol-label fs-3 {{ app(\App\Actions\GetThemeType::class)->handle('bg-light-? text-?', $object->product_type) }}">
-                        {{ substr($object->product_type, 0, 1) }}
+                    <div class="symbol-label fs-3 {{ app(\App\Actions\GetThemeType::class)->handle('bg-light-? text-?', $object->name) }}">
+                        {{ substr($object->name, 0, 1) }}
                     </div>
                 @endif
             </div>
@@ -18,8 +18,8 @@
 
     <div class="d-flex flex-column">
         <a href="{{ route('product.edit', $object->id)}}"
-            class="text-gray-800 text-hover-primary mb-1">{{ $object->product_type }}</a>
-        <span>{{ $object->service }}</span>
+            class="text-gray-800 text-hover-primary mb-1">{{ $object->name }}</a>
+        <span>{{ $object->product_type }}</span>
     </div>
 
 </div>
